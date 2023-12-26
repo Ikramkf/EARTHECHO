@@ -34,11 +34,6 @@ Participez à notre mission en contribuant à la plateforme et en partageant vos
 4. *Envoyez une Pull Request :* Partagez vos contributions pour examen.
 
 
-## Demo_video
-
-[Télécharger le Fichier](https://drive.google.com/drive/folders/1a9XCTNSlX2m3eHruh4vQKiLLC-Mist02?usp=sharing)
-
-
 ## Exécution Locale
 
 1. *Installez les Dépendances :* npm install
