@@ -1,0 +1,65 @@
+<body>
+<div class="container-fluid">
+<section class="parallax">
+  <img src="./assets/images/hill1.png" id="hill1">
+  <img src="./assets/images/hill2.png" id="hill2">
+  <img src="./assets/images/hill3.png" id="hill3">
+  <img src="./assets/images/hill4.png" id="hill4">
+  <img src="./assets/images/hill5.png" id="hill5">
+  <img src="./assets/images/tree.png" id="tree">
+  <h2 id="text"  > Earth Echo </h2>
+  <img src="./assets/images/leaf.png" id="leaf">
+  <img src="./assets/images/plant.png" id="plant">
+</section>
+<section class="sec">
+  <h2> Earth Echo web </h2>
+  <p>Bienvenue sur EarthEcho, votre plateforme dédiée à la sensibilisation et à l'action face au changement climatique.
+     Nous sommes ici pour vous informer sur les défis pressants du changement climatique, en exposant ses effets néfastes sur notre planète. 
+     À travers des contenus riches et engageants, EarthEcho vous propose une exploration immersive des conséquences du changement climatique, allant des impacts sur la biodiversité à l'élévation du niveau de la mer. 
+     Notre mission est d'éduquer, d'inspirer et de mobiliser, en fournissant également des solutions concrètes et innovantes pour que chacun puisse contribuer à la préservation de notre environnement. 
+     Ensemble, construisons un avenir durable et agissons pour la santé de notre planète. </p> <br>
+</section>
+<section class="banner">
+  <div class="slider">
+    <div
+      class="slide active"
+      *ngFor="let slide of slides; let i = index"
+      [ngClass]="{ active: i === currentSlide }"
+    >
+      <img [src]="slide.image" alt="" />
+      <div class="left-info">
+        <div class="penetrate-blur">
+          <h1>{{slide.title}}</h1>
+        </div>
+      
+      <div class="content">
+        <h3>{{slide.subtitle}}</h3>
+        <p>
+          {{slide.description}}
+        </p>
+        <a class="btn" routerLink="{{slide.index}}">Voir plus</a>
+      </div>
+      </div>
+      <div class="right-info">
+        <h1>{{slide.pp}}</h1>
+        <h3>{{slide.tt}}</h3>
+      </div>
+    </div>
+  </div>
+  
+  <div class="navigation">
+    <span class="prev-btn" (click)="prevSlide()">
+      <i class="bx bx-chevron-left"></i>
+    </span>
+    <span class="next-btn" (click)="nextSlide()">
+      <i class="bx bx-chevron-right"></i>
+    </span>
+  </div>
+</section>
+
+
+
+<div class="separator"></div>
+</div>
+
+</body>

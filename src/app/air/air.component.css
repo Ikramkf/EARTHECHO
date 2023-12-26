@@ -1,0 +1,87 @@
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#text {
+    position: absolute;
+    font-size: 5em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec {
+    position: relative;
+    background: #335159;
+    padding: 100px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-right: 10px;
+    color: white;
+}
+
+.section-description {
+    flex-grow: 1;
+    color: white;
+    width: 50%;
+    margin-left: 20px;
+}
+
+.section-card {
+    position: relative;
+    width: 50%;
+    height: 330px;
+    background-color: #C4C4C4;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-content .section-title {
+    margin-left: 20px;
+}
+
+.section-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='540' viewBox='0 0 500 540' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M260.265 1.11184C313.496 -2.74976 373.563 2.02516 412.645 38.4064C450.921 74.0374 442.197 135.465 458.124 185.298C471.75 227.932 504.391 265.681 499.506 310.177C494.57 355.134 458.24 387.858 431.853 424.572C402.678 465.167 384.991 523.472 336.782 536.593C288.517 549.728 242.977 510.002 197.934 488.236C159.899 469.856 123.276 450.468 94.5079 419.516C64.9474 387.71 45.1144 349.839 31.0954 308.727C14.4697 259.971 -11.7385 207.858 5.82035 159.43C23.5493 110.534 77.3138 86.9923 121.449 59.5311C164.961 32.4575 209.166 4.8188 260.265 1.11184Z' fill='%23C4C4C4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.section-card img {
+    max-width: calc(100% - 40px); /* Ajuste la largeur de l'image en fonction de la taille de la carte */
+    max-height: calc(100% - 40px); /* Ajuste la hauteur de l'image en fonction de la taille de la carte */
+}

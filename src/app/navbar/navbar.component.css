@@ -1,0 +1,150 @@
+/* .navbar {
+    display: flex;
+    align-items: center;
+    background-color: #0080ff;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .navbar-left {
+    margin-right: auto;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar-right li {
+    margin-left: 10px;
+    cursor: pointer;
+  } */
+
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    background: rgba(255, 255, 255, .1);
+    justify-content: flex-start;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+  }
+  
+
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+    transition: .5s;
+}
+.header:hover::before {
+    left: 100%;
+}
+  
+  .logo  {
+    
+    font-size: 25px;
+    margin-right: 270px;
+    
+
+  }
+
+  .logo .img{
+   
+      position: absolute;
+      
+      width: 50%;
+      height:auto;
+    
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: black;
+    padding:  6px  15px;
+    border-radius: 20px;
+    
+    margin: 0 8px;
+    font-weight: 600;
+    justify-content: space-between;
+    align-items:center;
+    font-size: 20px;
+    
+  }
+  .navigation a:last-child {
+    margin-right: 0;
+    margin-left: auto; /* Ajout de cette propriété */
+  }
+  .navigation a:hover,
+  .navigation a.active {
+    background: #748380;
+    color: white;
+  }
+  @media screen and (max-width: 600px) {
+    .navigation a:not(:first-child) {display: none;}
+    .navigation a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navigation {position: relative;}
+    .navigation.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navigation.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  .fas.fa-adjust {
+    cursor: pointer;
+  }
+  
+ 
+  button {
+    background-color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .dark-theme {
+    background-color: #333333;
+  }
+  .dark-theme button {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
